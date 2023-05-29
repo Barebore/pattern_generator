@@ -5,7 +5,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 ckpt*
-log*/
+# log*/
 chpt/
 data/
 checkpoint
