@@ -21,7 +21,7 @@ class PatternAPIViewBase64(APIView):
         try:
             directory, width, height = list_to_input_img(pattern, username)
         except Exception as e:
-            return Response({'exception': str(e)})
+            return Response({'exception': str(e)}, status=406)
         input_img_output_img(width, height, directory)
         with open(directory, "rb") as image_file:
             encoded_string = base64.b64encode(image_file.read())
